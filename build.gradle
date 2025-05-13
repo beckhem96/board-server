@@ -33,6 +33,8 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
     implementation("org.springframework.boot:spring-boot-starter-aop:3.4.4")
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis:3.1.0")
 }
 
 tasks.named('test') {
