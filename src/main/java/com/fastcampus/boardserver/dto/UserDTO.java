@@ -10,13 +10,17 @@ import java.util.Date;
 @Setter
 @ToString
 public class UserDTO {
+    public static boolean hasNullDataBeforeRegister(UserDTO userDTO) {
+        return userDTO.getUserId() == null || userDTO.getPassword() == null || userDTO.getNickName() == null;
+    }
+
     public enum Status {
         DEFAULT, ADMIN, DELETED
     }
     private int id;
     private String userId;
     private String password;
-    private String nickname;
+    private String nickName;
     private boolean isAdmin;
     private Date createTime;
     private boolean isWithDraw;
