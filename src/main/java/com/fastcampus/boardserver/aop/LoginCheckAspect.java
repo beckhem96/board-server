@@ -26,6 +26,7 @@ public class LoginCheckAspect {
         int idIndex = 0;
 
         String userType = loginCheck.type().toString();
+        log.error("lwt check: " + userType);
         switch (userType) {
             case "ADMIN":
                 id = SessionUtil.getLoginAdminId(session);

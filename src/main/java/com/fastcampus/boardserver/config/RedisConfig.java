@@ -30,7 +30,7 @@ public class RedisConfig {
     @Value("${spring.data.redis.password}")
     private String redisPassword;
 
-    @Value("$expire.defaultTime}")
+    @Value("${expire.defaultTime}")
     private Long defaultTime;
 
     @Bean
