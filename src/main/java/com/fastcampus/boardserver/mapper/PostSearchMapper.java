@@ -9,4 +9,5 @@ import java.util.List;
 @Mapper
 public interface PostSearchMapper {
     public List<PostDTO> selectPosts(PostSearchRequest PostsSearchRequest);
+    public List<PostDTO> selectPostByTag(String tagName);
 }

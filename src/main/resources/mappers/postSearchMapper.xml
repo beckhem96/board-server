@@ -35,8 +35,23 @@
         <if test="sortStatus.toString() == 'CATEGORIES'">
             ORDER BY categoryId
         </if>
+    </select>
 
-
+    <select id="selectPostByTag" resultType="com.fastcampus.boardserver.dto.request.PostSearchRequest">
+        SELECT p.id,
+               p.name,
+               p.isAdmin,
+               p.contents,
+               p.createTime,
+               p.views,
+               p.categoryId,
+               p.userId,
+               p.fileId,
+               p.updateTime
+        FROM post p
+        join posttag pt on p.id = pt.postId
+        join tag t on pt.tagId = t.id
+        WHERE t.name = #{tagName}
     </select>
 
 </mapper>
